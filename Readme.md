@@ -8,9 +8,12 @@
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/GDLogger.svg)](https://cocoapods.org/pods/GDLogger)
 
 [![Travis](https://img.shields.io/travis/genedelisa/GDLogger/master.svg)](https://travis-ci.org/genedelisa/GDLogger/branches)
-[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
 
-cookiecutter bootstrap template for swift framework
+
+
+Yet another logger for Swift.
+This uses OSLog and NSLog as a fallback.
+I think this makes OSLog easier to use.
 
 - [Requirements](#requirements)
 - [Installation](#installation)

@@ -13,7 +13,7 @@ import os.log
 /// The logger. This is a wrapper for `OSLog`. It falls back to `NSLog` in some cases.
 public struct GDLogger {
     
-    private let logger: OSLog
+    private let logger: OSLog?
     
     /// Predefined subsystems. Extend these.
     public enum LogSubsystem: String {
@@ -60,34 +60,40 @@ public struct GDLogger {
     public init(_ category: LogCategory = .general, subSystem: LogSubsystem = .bundle) {
         if subSystem == .bundle {
             if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-                    logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: category.rawValue)
+                logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: category.rawValue)
             } else {
+                logger = nil
                 // Fallback on earlier versions
-                fatalError("need iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0 or later")
+                //fatalError("need iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0 or later")
             }
         } else {
             if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
                 logger = OSLog(subsystem: subSystem.rawValue, category: category.rawValue)
             } else {
+                logger = nil
                 // Fallback on earlier versions
-                fatalError("need iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0 or later")
+                //fatalError("need iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0 or later")
             }
         }
-
+        
     }
     
     public func info(_ msg: StaticString, _ args: CVarArg, function: String = #function,
                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            os_log(msg, log: logger, type: .info, args)
+            if let logger = logger {
+                os_log(msg, log: logger, type: .info, args)
+            }
         }
     }
     
     public func error(_ msg: StaticString, _ args: CVarArg, function: String = #function,
                       file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            os_log(msg, log: logger, type: .error, args)
+            if let logger = logger {
+                os_log(msg, log: logger, type: .error, args)
+            }
         }
     }
     
@@ -96,7 +102,9 @@ public struct GDLogger {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
-            os_log("%{public}@", dso: dso, log: logger, type: .debug, message)
+            if let logger = logger {
+                os_log("%{public}@", dso: dso, log: logger, type: .debug, message)
+            }
         }
     }
     
@@ -105,8 +113,11 @@ public struct GDLogger {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
-            os_log("%{public}@", dso: dso, log: logger, type: .fault, message)
+            if let logger = logger {
+                os_log("%{public}@", dso: dso, log: logger, type: .fault, message)
+            }
         }
+        
     }
     
     public func debug(_ msg: String, function: String = #function,
@@ -114,7 +125,9 @@ public struct GDLogger {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
-            os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, debugPrefix, message, debugPostfix)
+            if let logger = logger {
+                os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, debugPrefix, message, debugPostfix)
+            }
         } else {
             NSLog("%@", msg)
         }
@@ -124,7 +137,9 @@ public struct GDLogger {
                       file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
-            os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, errorPrefix, message, errorPostfix)
+            if let logger = logger {
+                os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, errorPrefix, message, errorPostfix)
+            }
         } else {
             NSLog("%@", msg)
         }
@@ -134,7 +149,9 @@ public struct GDLogger {
                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
-            os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, infoPrefix, message, infoPostfix)
+            if let logger = logger {
+                os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, infoPrefix, message, infoPostfix)
+            }
         } else {
             NSLog("%@", msg)
         }
@@ -144,7 +161,10 @@ public struct GDLogger {
                       file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
-            os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, faultPrefix, message, faultPostfix)
+            
+            if let logger = logger {
+                os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, faultPrefix, message, faultPostfix)
+            }
         } else {
             NSLog("%@", msg)
         }
