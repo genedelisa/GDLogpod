@@ -63,19 +63,14 @@ public struct GDLogger {
                 logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: category.rawValue)
             } else {
                 logger = nil
-                // Fallback on earlier versions
-                //fatalError("need iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0 or later")
             }
         } else {
             if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
                 logger = OSLog(subsystem: subSystem.rawValue, category: category.rawValue)
             } else {
                 logger = nil
-                // Fallback on earlier versions
-                //fatalError("need iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0 or later")
             }
         }
-        
     }
     
     public func info(_ msg: StaticString, _ args: CVarArg, function: String = #function,
@@ -84,6 +79,8 @@ public struct GDLogger {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             if let logger = logger {
                 os_log(msg, log: logger, type: .info, args)
+            } else {
+                os_log(msg, type: .info, args)
             }
         }
     }
@@ -93,6 +90,8 @@ public struct GDLogger {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             if let logger = logger {
                 os_log(msg, log: logger, type: .error, args)
+            } else {
+                os_log(msg, type: .error, args)
             }
         }
     }
@@ -104,6 +103,8 @@ public struct GDLogger {
             let message = format(msg, function: function, file: file, line: line)
             if let logger = logger {
                 os_log("%{public}@", dso: dso, log: logger, type: .debug, message)
+            } else {
+                os_log("%{public}@", dso: dso, type: .debug, message)
             }
         }
     }
@@ -115,6 +116,8 @@ public struct GDLogger {
             let message = format(msg, function: function, file: file, line: line)
             if let logger = logger {
                 os_log("%{public}@", dso: dso, log: logger, type: .fault, message)
+            } else {
+                os_log("%{public}@", dso: dso, type: .fault, message)
             }
         }
         
@@ -179,7 +182,8 @@ public struct GDLogger {
     
     fileprivate func format(_ message: StaticString, function: String, file: String, line: Int32) -> String {
         let fileName = URL(fileURLWithPath: file).lastPathComponent
-        return "\(message) → \(function) ⋆ \(fileName) ):\(line)"
+//        return "\(message) → \(function) ⋆ \(fileName) ):\(line)"
+        return "\(message)\(msgSeparator)\(function)\(fileSeparator)\(fileName)\(lineSeparator)\(line)"
     }
     
     

@@ -12,8 +12,27 @@
 
 
 Yet another logger for Swift.
-This uses OSLog and NSLog as a fallback.
-I think this makes OSLog easier to use.
+This uses Apple's Unified Logging `OSLog` - and `NSLog` as a fallback.
+I think this makes `OSLog` easier to use in Swift since you can use string interpolation.
+
+Use the system console (and/or Xcode's console) to read the logging messages.
+
+To check the current logging level.
+```bash
+$ sudo log config --status
+```
+
+To set the logging level for a subsystem.
+```bash
+$ sudo log config --mode "level:debug" --subsystem com.your_company.your_subsystem_name
+```
+
+[Apple's Unified Logging](https://developer.apple.com/documentation/os/logging)
+
+Other logging options.
+
+[CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)
+[XCGLogger](https://github.com/DaveWoodCom/XCGLogger)
 
 - [Requirements](#requirements)
 - [Installation](#installation)
