@@ -5,9 +5,6 @@
       location = "group:GDLogger.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:GDLogger.playground">
-   </FileRef>
-   <FileRef
       location = "group:scripts">
    </FileRef>
    <FileRef

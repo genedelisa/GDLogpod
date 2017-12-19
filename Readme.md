@@ -9,55 +9,21 @@
 
 [![Travis](https://img.shields.io/travis/genedelisa/GDLogger/master.svg)](https://travis-ci.org/genedelisa/GDLogger/branches)
 
+[![Swift 4](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
+
+[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://swift.org/)
+[![Platforms macOS](https://img.shields.io/badge/Platforms-macOS-lightgray.svg?style=flat)](https://swift.org/)
+[![Platforms tvOS](https://img.shields.io/badge/Platforms-tvOS-lightgray.svg?style=flat)](https://swift.org/)
+[![Platforms watchOS](https://img.shields.io/badge/Platforms-watchOS-lightgray.svg?style=flat)](https://swift.org/)
+
+[![Sponsors](https://img.shields.io/badge/Sponsors-Rockhopper%20Technologies-orange.svg?style=flat)](http://www.rockhoppertech.com/)
+[![Twitter @GeneDeLisaDev](https://img.shields.io/twitter/follow/GeneDeLisaDev.svg?style=social)](https://twitter.com/GeneDeLisaDev)
+
 
 
 Yet another logger for Swift.
 This uses Apple's Unified Logging `OSLog` - and `NSLog` as a fallback, so it's essentially a façade.
 I think this makes `OSLog` easier to use in Swift since you can use string interpolation.
-
-Use the system console (and/or Xcode's console) to read the logging messages.
-
-To check the current logging level.
-```bash
-$ sudo log config --status
-```
-
-To set the logging level for a subsystem.
-```bash
-$ sudo log config --mode "level:debug" --subsystem com.your_company.your_subsystem_name
-```
-
-Here is some sample output.
-
-```bash
-2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
-```
-
-The prefix/postfix emojis can be reconfigured.
-
-```Swift
-var log = GDLogger()
-log.debugPrefix = "♫ "
-log.debugPostfix = "  ♫"
-```
-
-
-For example, from the Terminal (or iterm), set the debug level for your subsystem. Then you can stream the output.
-```bash
-
-$ sudo log config --mode "level:debug" --subsystem com.rockhoppertech.SlowItDown
-
-$ log stream --predicate 'subsystem == "com.rockhoppertech.SlowItDown"' --info --debug
-```
-
-
-You can filter by your subsystem in the Console app.
-
-Sample Console output:
-
-![Console](screenshots/consoleLogging.png "Console")
-
-
 
 
 
@@ -186,10 +152,43 @@ $ git submodule update --init --recursive
 
 [Apple's Unified Logging](https://developer.apple.com/documentation/os/logging)
 
+To set the logging level for a subsystem.
+```bash
+$ sudo log config --mode "level:debug" --subsystem com.your_company.your_subsystem_name
+```
+For example, from the Terminal (or iterm), set the debug level for your subsystem. Then you can stream the output.
+```bash
+
+$ sudo log config --mode "level:debug" --subsystem com.rockhoppertech.SlowItDown
+
+$ log stream --predicate 'subsystem == "com.rockhoppertech.SlowItDown"' --info --debug
+```
+To check the current logging level.
+```bash
+$ sudo log config --status
+```
+
+Use the system console (and/or Xcode's console) to read the logging messages.
+
+You can filter by your subsystem in the Console app.
+
+Sample Console output:
+
+![Console](screenshots/consoleLogging.png "Console")
+
+
+The message emojis can be redefined per level.
+
 ```Swift
 var log = GDLogger()
 log.debugPrefix = "♫ "
 log.debugPostfix = "  ♫"
+```
+
+Here is some sample output.
+
+```bash
+2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
 ```
 
 Other options for creating loggers.
