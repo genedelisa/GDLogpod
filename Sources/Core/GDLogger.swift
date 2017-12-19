@@ -62,6 +62,7 @@ public struct GDLogger {
     public var msgSeparator = " ☞ "
     public var fileSeparator = " 🗄"
     public var lineSeparator = "➸"
+    public var columnSeparator = ":"
     //2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
     
     
@@ -123,47 +124,48 @@ public struct GDLogger {
     ///   - function: defaults to function name
     ///   - file: defaults to filename
     ///   - line: defaults to line where this was called
+    ///   - column: defaults to column where this was called
     ///   - dso: dynamic shared objct. the currently loaded .dylib or .so
     /// - requires: iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0
     
     public func info(_ msg: StaticString, _ args: CVarArg, function: String = #function,
-                     file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .info, function, file, line, dso)
+            logMessage(msg, .info, function, file, line, column, dso)
         }
     }
     
     
     public func error(_ msg: StaticString, _ args: CVarArg, function: String = #function,
-                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .error, function, file, line, dso)
+            logMessage(msg, .error, function, file, line, column, dso)
         }
     }
     
     public func debug(_ msg: StaticString, _ args: CVarArg, function: String = #function,
-                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .debug, function, file, line, dso)
+            logMessage(msg, .debug, function, file, line, column, dso)
         }
     }
     
     public func fault(_ msg: StaticString, _ args: CVarArg, function: String = #function,
-                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .fault, function, file, line, dso)
+            logMessage(msg, .fault, function, file, line, column, dso)
         }
         
     }
     
     
-    fileprivate func logMessage(_ msg: StaticString, _ logType: OSLogType, _ function: String, _ file: String, _ line: Int32, _ dso: UnsafeRawPointer?) {
+    fileprivate func logMessage(_ msg: StaticString, _ logType: OSLogType, _ function: String, _ file: String, _ line: Int32, _ column: Int32, _ dso: UnsafeRawPointer?) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            let message = format(msg, function: function, file: file, line: line)
+            let message = format(msg, function: function, file: file, line: line, column: column)
             if let logger = logger {
                 os_log("%{public}@", dso: dso, log: logger, type: logType, message)
             } else {
@@ -176,9 +178,9 @@ public struct GDLogger {
     
     // Strings as the message. Interpolation possible.
     
-    fileprivate func logMessage(_ msg: String, _ prefix: String, _ postfix: String, _ logType: OSLogType, _ function: String, _ file: String, _ line: Int32, _ dso: UnsafeRawPointer?) {
+    fileprivate func logMessage(_ msg: String, _ prefix: String, _ postfix: String, _ logType: OSLogType, _ function: String, _ file: String, _ line: Int32, _ column: Int32, _ dso: UnsafeRawPointer?) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            let message = format(msg, function: function, file: file, line: line)
+            let message = format(msg, function: function, file: file, line: line, column: column)
             if let logger = logger {
                 if let dso = dso {
                     os_log("%@%{public}@%@", dso: dso, log: logger, type: logType, prefix, message, postfix)
@@ -192,44 +194,43 @@ public struct GDLogger {
     }
     
     public func debug(_ msg: String, function: String = #function,
-                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .debug, function, file, line, dso)
+            logMessage(msg, debugPrefix, debugPostfix, .debug, function, file, line, column, dso)
         }
     }
     
     public func error(_ msg: String, function: String = #function,
-                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, errorPrefix, errorPostfix, .error, function, file, line, dso)
+            logMessage(msg, errorPrefix, errorPostfix, .error, function, file, line, column, dso)
         }
         
     }
     
     public func info(_ msg: String, function: String = #function,
-                     file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, dso)
+            logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, column, dso)
         }
         
     }
     
     public func fault(_ msg: String, function: String = #function,
-                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, faultPrefix, faultPostfix, .fault, function, file, line, dso)
+            logMessage(msg, faultPrefix, faultPostfix, .fault, function, file, line, column, dso)
         }
     }
     
     
-    fileprivate func format(_ message: String, function: String, file: String, line: Int32) -> String {
+    fileprivate func format(_ message: String, function: String, file: String, line: Int32, column: Int32) -> String {
         let fileName = URL(fileURLWithPath: file).lastPathComponent
-        return "\(message)\(msgSeparator)\(function)\(fileSeparator)\(fileName)\(lineSeparator)\(line)"
+        return "\(message)\(msgSeparator)\(function)\(fileSeparator)\(fileName)\(lineSeparator)\(line)\(columnSeparator)\(column)"
     }
     
-    fileprivate func format(_ message: StaticString, function: String, file: String, line: Int32) -> String {
+    fileprivate func format(_ message: StaticString, function: String, file: String, line: Int32, column: Int32) -> String {
         let fileName = URL(fileURLWithPath: file).lastPathComponent
-        //        return "\(message) → \(function) ⋆ \(fileName) ):\(line)"
         return "\(message)\(msgSeparator)\(function)\(fileSeparator)\(fileName)\(lineSeparator)\(line)"
     }
     
