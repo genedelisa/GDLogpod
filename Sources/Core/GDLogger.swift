@@ -176,11 +176,15 @@ public struct GDLogger {
     
     // Strings as the message. Interpolation possible.
     
-    fileprivate func logMessage(_ msg: String, _ logType: OSLogType, _ function: String, _ file: String, _ line: Int32, _ dso: UnsafeRawPointer?) {
+    fileprivate func logMessage(_ msg: String, _ prefix: String, _ postfix: String, _ logType: OSLogType, _ function: String, _ file: String, _ line: Int32, _ dso: UnsafeRawPointer?) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             let message = format(msg, function: function, file: file, line: line)
             if let logger = logger {
-                os_log("%@%{public}@%@", dso: dso, log: logger, type: .debug, debugPrefix, message, debugPostfix)
+                if let dso = dso {
+                    os_log("%@%{public}@%@", dso: dso, log: logger, type: logType, prefix, message, postfix)
+                } else {
+                    os_log("%@%{public}@%@", log: logger, type: logType, prefix, message, postfix)
+                }
             }
         } else {
             NSLog("%@", msg)
@@ -190,14 +194,14 @@ public struct GDLogger {
     public func debug(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .debug, function, file, line, dso)
+            logMessage(msg, debugPrefix, debugPostfix, .debug, function, file, line, dso)
         }
     }
     
     public func error(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .error, function, file, line, dso)
+            logMessage(msg, errorPrefix, errorPostfix, .error, function, file, line, dso)
         }
         
     }
@@ -205,7 +209,7 @@ public struct GDLogger {
     public func info(_ msg: String, function: String = #function,
                      file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .info, function, file, line, dso)
+            logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, dso)
         }
         
     }
@@ -213,7 +217,7 @@ public struct GDLogger {
     public func fault(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, .fault, function, file, line, dso)
+            logMessage(msg, faultPrefix, faultPostfix, .fault, function, file, line, dso)
         }
     }
     
