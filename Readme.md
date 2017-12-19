@@ -12,7 +12,7 @@
 
 
 Yet another logger for Swift.
-This uses Apple's Unified Logging `OSLog` - and `NSLog` as a fallback.
+This uses Apple's Unified Logging `OSLog` - and `NSLog` as a fallback, so it's essentially a façade.
 I think this makes `OSLog` easier to use in Swift since you can use string interpolation.
 
 Use the system console (and/or Xcode's console) to read the logging messages.
@@ -27,12 +27,39 @@ To set the logging level for a subsystem.
 $ sudo log config --mode "level:debug" --subsystem com.your_company.your_subsystem_name
 ```
 
-[Apple's Unified Logging](https://developer.apple.com/documentation/os/logging)
+Here is some sample output.
 
-Other logging options.
+```bash
+2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
+```
 
-[CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)
-[XCGLogger](https://github.com/DaveWoodCom/XCGLogger)
+The prefix/postfix emojis can be reconfigured.
+
+```Swift
+var log = GDLogger()
+log.debugPrefix = "♫ "
+log.debugPostfix = "  ♫"
+```
+
+
+For example, from the Terminal (or iterm), set the debug level for your subsystem. Then you can stream the output.
+```bash
+
+$ sudo log config --mode "level:debug" --subsystem com.rockhoppertech.SlowItDown
+
+$ log stream --predicate 'subsystem == "com.rockhoppertech.SlowItDown"' --info --debug
+```
+
+
+You can filter by your subsystem in the Console app.
+
+Sample Console output:
+
+![Console](screenshots/consoleLogging.png "Console")
+
+
+
+
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -41,7 +68,7 @@ Other logging options.
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+ / Mac OS X 10.12+ / tvOS 10.0+ / watchOS 3.0+
 - Xcode 9.0+
 
 ## Installation
@@ -54,11 +81,12 @@ Other logging options.
 $ gem install cocoapods
 ```
 
+
 To integrate GDLogger into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 
 pod 'GDLogger', '~> 0.0.1'
@@ -147,7 +175,38 @@ $ git submodule update --init --recursive
 - Add the downloaded `GDLogger.framework`.
 - And that's it!
 
+### Other logging options.
+
+[CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)
+
+[XCGLogger](https://github.com/DaveWoodCom/XCGLogger)
+
+
 ## Usage
+
+[Apple's Unified Logging](https://developer.apple.com/documentation/os/logging)
+
+```Swift
+var log = GDLogger()
+log.debugPrefix = "♫ "
+log.debugPostfix = "  ♫"
+```
+
+Other options for creating loggers.
+
+```Swift
+var log2 = GDLogger(category: "my category")
+log2.debug("logging to my category string")
+
+public enum MyCategories: String {
+    case mycat
+}
+var log3 = GDLogger(category: MyCategories.mycat.rawValue)
+log3.debug("logging to my category enum")
+
+var log4 = GDLogger(.controller, category: .general)
+log4.debug("logging to controler subsystem using general category")
+````
 
 ## License
 
