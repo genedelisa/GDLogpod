@@ -136,6 +136,15 @@ public struct GDLogger {
         }
     }
     
+    // same as info since there is no verbose
+    public func verbose(_ msg: StaticString, _ args: CVarArg, function: String = #function,
+                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+        
+        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
+            logMessage(msg, .info, function, file, line, column, dso)
+        }
+    }
+    
     
     public func error(_ msg: StaticString, _ args: CVarArg, function: String = #function,
                       file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
@@ -209,6 +218,15 @@ public struct GDLogger {
     }
     
     public func info(_ msg: String, function: String = #function,
+                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
+            logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, column, dso)
+        }
+        
+    }
+    
+    // same as info since there is no "verbose"
+    public func verbose(_ msg: String, function: String = #function,
                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, column, dso)
