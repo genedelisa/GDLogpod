@@ -15,9 +15,25 @@ class GDLoggerSpec: QuickSpec {
     override func spec() {
 
         describe("GDLoggerSpec") {
-            it("works") {
-//                expect(GDLogger.name) == "GDLogger"
+            
+            it("work by default") {
+                let log = GDLogger()
+                log.debug("hello")
+                expect(log.logger).toNot(beNil())
             }
+            
+            it("has a category") {
+                let log = GDLogger(category: "some category")
+                log.debug("hello")
+                expect(log.logger).toNot(beNil())
+            }
+            
+            it("has a string subsystem and category") {
+                let log = GDLogger("foosubsystem", category: "foocategory")
+                log.debug("hello")
+                expect(log.logger).toNot(beNil())
+            }
+            
         }
 
     }

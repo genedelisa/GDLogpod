@@ -78,7 +78,12 @@ public struct GDLogger {
             if let subsystem = subsystem {
                 logger = OSLog(subsystem: subsystem, category: category)
             } else {
-                logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: category)
+                if let ss = Bundle.main.bundleIdentifier {
+                    logger = OSLog(subsystem: ss, category: category)
+                } else {
+                    logger = OSLog(subsystem: "noBundle", category: category)
+                    error("no subsystem from bundle.")
+                }
             }
         } else {
             logger = nil
@@ -94,7 +99,12 @@ public struct GDLogger {
     public init(_ subsystem: LogSubsystem, category: LogCategory = .general ) {
         
         if subsystem == .bundle {
-            self.init(Bundle.main.bundleIdentifier!, category: category.rawValue)
+            if let ss = Bundle.main.bundleIdentifier {
+                self.init(ss, category: category.rawValue)
+            } else {
+                self.init("noBundle", category: category.rawValue)
+                error("no subsystem from bundle.")
+            }
         } else {
             self.init(subsystem.rawValue, category: category.rawValue)
         }
@@ -111,7 +121,12 @@ public struct GDLogger {
         if let subsystem = subsystem {
             self.init(subsystem, category: category.rawValue)
         } else {
-            self.init(Bundle.main.bundleIdentifier!, category: category.rawValue)
+            if let ss = Bundle.main.bundleIdentifier {
+                self.init(ss, category: category.rawValue)
+            } else {
+                self.init("noBundle", category: category.rawValue)
+                error("no subsystem from bundle.")
+            }
         }
     }
     

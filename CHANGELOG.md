@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ---
+## 0.0.2 - 2018-01-12
+- Handle no bundle name availabile if used from a library
 
 ## 0.0.1 - 2017-12-19
 ### Added
