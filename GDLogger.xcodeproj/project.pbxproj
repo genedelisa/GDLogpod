@@ -49,11 +49,11 @@
 		35B742391F82A62900829B21 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; };
 		B039E49A1FE94004003441B3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B039E4961FE94003003441B3 /* .swiftlint.yml */; };
 		B039E49B1FE94004003441B3 /* .jazzy.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B039E4971FE94003003441B3 /* .jazzy.yaml */; };
-		B039E49C1FE94004003441B3 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = B039E4981FE94004003441B3 /* .swift-version */; };
 		B039E49D1FE94004003441B3 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = B039E4991FE94004003441B3 /* CHANGELOG.md */; };
 		B039E4A51FE942BD003441B3 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = B039E4A41FE942BD003441B3 /* docs */; };
 		B039E4A71FE942CB003441B3 /* screenshots in Resources */ = {isa = PBXBuildFile; fileRef = B039E4A61FE942CA003441B3 /* screenshots */; };
 		B039E4A91FE94B17003441B3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B039E4A81FE94B17003441B3 /* .gitignore */; };
+		B0727F202010F0BF00938FA3 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = B0727F1F2010F0BF00938FA3 /* .swift-version */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,11 +142,11 @@
 		35B742351F82A61E00829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		B039E4961FE94003003441B3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B039E4971FE94003003441B3 /* .jazzy.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .jazzy.yaml; sourceTree = "<group>"; };
-		B039E4981FE94004003441B3 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../../templateiOSApp/.swift-version"; sourceTree = "<group>"; };
 		B039E4991FE94004003441B3 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B039E4A41FE942BD003441B3 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = "<group>"; };
 		B039E4A61FE942CA003441B3 /* screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshots; sourceTree = "<group>"; };
 		B039E4A81FE94B17003441B3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B0727F1F2010F0BF00938FA3 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,11 +214,11 @@
 		3549BAFB1DA387DB00C63030 = {
 			isa = PBXGroup;
 			children = (
+				B0727F1F2010F0BF00938FA3 /* .swift-version */,
 				B039E4A81FE94B17003441B3 /* .gitignore */,
 				B039E4A61FE942CA003441B3 /* screenshots */,
 				B039E4A41FE942BD003441B3 /* docs */,
 				B039E4971FE94003003441B3 /* .jazzy.yaml */,
-				B039E4981FE94004003441B3 /* .swift-version */,
 				B039E4961FE94003003441B3 /* .swiftlint.yml */,
 				B039E4991FE94004003441B3 /* CHANGELOG.md */,
 				3549BB161DA3890B00C63030 /* Sources */,
@@ -551,11 +551,11 @@
 			files = (
 				B039E49B1FE94004003441B3 /* .jazzy.yaml in Resources */,
 				B039E4A91FE94B17003441B3 /* .gitignore in Resources */,
-				B039E49C1FE94004003441B3 /* .swift-version in Resources */,
 				B039E49A1FE94004003441B3 /* .swiftlint.yml in Resources */,
 				B039E49D1FE94004003441B3 /* CHANGELOG.md in Resources */,
 				B039E4A71FE942CB003441B3 /* screenshots in Resources */,
 				B039E4A51FE942BD003441B3 /* docs in Resources */,
+				B0727F202010F0BF00938FA3 /* .swift-version in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
