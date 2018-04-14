@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
  s.name = 'GDLogger'
- s.version = '0.0.3'
+ s.version = '0.0.4'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'A facade for OSLog'
  s.homepage = 'http://rockhoppertech.com/blog'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
  s.authors = { "Gene De Lisa" => "gene@rockhoppertech.com" }
  s.source = { :git => "https://github.com/genedelisa/GDLogger.git", :tag => s.version.to_s }
  #s.source = { :git => "https://github.com/genedelisa/GDLogger.git", :tag => "v"+s.version.to_s }
- s.platforms = { :ios => "10.0", :osx => "10.12", :tvos => "10.0", :watchos => "3.0" }
+ s.platforms = { :ios => "10.0", :osx => "10.10", :tvos => "10.0", :watchos => "3.0" }
 
  s.requires_arc = true
 
