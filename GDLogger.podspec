@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
  s.name = 'GDLogger'
- s.version = '0.0.4'
+ s.version = '0.0.5'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'A facade for OSLog'
  s.homepage = 'http://rockhoppertech.com/blog'
