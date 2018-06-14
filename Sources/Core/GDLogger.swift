@@ -226,13 +226,14 @@ import os.log
     }
     
     // Objective-C doesn't like params with default values from Swift. Variadic params aren't allowed either.
-    @objc public func debug(_ msg: String) {
+//    @objc public func debug(_ msg: String) {
+//
+//        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
+//            // well, the problem is, #function will evaluate to this function!
+//            logMessage(msg, debugPrefix, debugPostfix, .debug, #function, #file, #line, #column, #dsohandle)
+//        }
+//    }
 
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .debug, #function, #file, #line, #column, #dsohandle)
-        }
-    }
-    
     @objc public func debug(_ msg: String, function: String? = #function,
                       file: String? = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
@@ -240,12 +241,12 @@ import os.log
         }
     }
     
-    @objc public func error(_ msg: String) {
-        
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .error, #function, #file, #line, #column, #dsohandle)
-        }
-    }
+//    @objc public func error(_ msg: String) {
+//
+//        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
+//            logMessage(msg, debugPrefix, debugPostfix, .error, #function, #file, #line, #column, #dsohandle)
+//        }
+//    }
     
     @objc public func error(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
