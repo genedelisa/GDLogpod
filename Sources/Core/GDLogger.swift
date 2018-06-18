@@ -12,7 +12,7 @@ import os.log
 
 /// This is a façade for Apple's Unified Logging `OSLog`.
 /// It falls back to `NSLog` in some cases.
-@objc public class GDLogger: NSObject {
+public struct GDLogger {
     
     /// the system logger
     public var logger: OSLog?
@@ -33,7 +33,6 @@ import os.log
     
     /// The Category.
     public enum LogCategory: String {
-        public typealias RawValue = String
         case general
         case params
         case paramsController
@@ -67,16 +66,14 @@ import os.log
     //2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
     
     
-   
+    
     
     /// Init that actually creates the `OSLog` instance. Or not.
     ///
     /// - Parameters:
     ///   - subsystem: an optional subsystem. The bundle if not specified
     ///   - category: the category to use
-    @objc public init(_ subsystem: String? = nil, category: String ) {
-        super.init()
-        
+    public init(_ subsystem: String? = nil, category: String ) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             if let subsystem = subsystem {
                 logger = OSLog(subsystem: subsystem, category: category)
@@ -91,12 +88,7 @@ import os.log
         } else {
             logger = nil
         }
-
-    }
-
-    // Objective-C wants this since LogCategory is not visible. It's raw type is a String
-    public convenience override init() {
-        self.init(nil, category: .general)
+        
     }
     
     /// Init with specified predefined subsystem and category
@@ -104,7 +96,7 @@ import os.log
     /// - Parameters:
     ///   - subsystem: a subsystem predefined in `LogSubsystem`
     ///   - category: a category predefined in `LogCategory`
-    public convenience init(_ subsystem: LogSubsystem, category: LogCategory = .general ) {
+    public init(_ subsystem: LogSubsystem, category: LogCategory = .general ) {
         
         if subsystem == .bundle {
             if let ss = Bundle.main.bundleIdentifier {
@@ -117,14 +109,14 @@ import os.log
             self.init(subsystem.rawValue, category: category.rawValue)
         }
     }
-
+    
     
     /// Default init. Called with inited with no args
     ///
     /// - Parameters:
     ///   - subsystem: the bundle if not specified
     ///   - category: general if not specified
-   public convenience init(_ subsystem: String? = nil, category: LogCategory = .general ) {
+    public init(_ subsystem: String? = nil, category: LogCategory = .general ) {
         
         if let subsystem = subsystem {
             self.init(subsystem, category: category.rawValue)
@@ -161,7 +153,7 @@ import os.log
     
     // same as info since there is no verbose
     public func verbose(_ msg: StaticString, _ args: CVarArg, function: String = #function,
-                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+                        file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, .info, function, file, line, column, dso)
@@ -225,93 +217,65 @@ import os.log
         }
     }
     
-    // Objective-C doesn't like params with default values from Swift. Variadic params aren't allowed either.
-    #if os(OSX)
-    @objc public func debug(_ msg: String) {
-
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            // well, the problem is, #function will evaluate to this function!
-            logMessage(msg, debugPrefix, debugPostfix, .debug, #function, #file, #line, #column, #dsohandle)
-        }
-    }
-    #endif
-    
-    #if os(iOS) || os(tvOS)
     #if DEBUG
-    @objc public func debug(_ msg: String, function: String? = #function,
-                            file: String? = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    public func debug(_ msg: String, function: String = #function,
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .debug, function!, file!, line, column, dso)
+            logMessage(msg, debugPrefix, debugPostfix, .debug, function, file, line, column, dso)
         }
     }
-    #else
-    @objc public func debug(_ msg: String, function: String? = #function,
-                            file: String? = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
-    }
-    #endif
-    #endif
     
-    
-
-    #if os(OSX)
-    @objc public func error(_ msg: String) {
-
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .error, #function, #file, #line, #column, #dsohandle)
-        }
-    }
-    #endif
-    
-    @objc public func error(_ msg: String, function: String = #function,
+    public func error(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, errorPrefix, errorPostfix, .error, function, file, line, column, dso)
         }
+        
     }
     
-    @objc public func info(_ msg: String) {
-        
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .info, #function, #file, #line, #column, #dsohandle)
-        }
-    }
-    @objc public func info(_ msg: String, function: String = #function,
+    public func info(_ msg: String, function: String = #function,
                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, column, dso)
         }
         
-    }
-    
-    @objc public func verbose(_ msg: String) {
-        
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .info, #function, #file, #line, #column, #dsohandle)
-        }
     }
     
     // same as info since there is no "verbose"
-    @objc public func verbose(_ msg: String, function: String = #function,
-                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    public func verbose(_ msg: String, function: String = #function,
+                        file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, infoPrefix, infoPostfix, .info, function, file, line, column, dso)
         }
         
     }
     
-    @objc public func fault(_ msg: String) {
-        
-        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-            logMessage(msg, debugPrefix, debugPostfix, .fault, #function, #file, #line, #column, #dsohandle)
-        }
-    }
-    
-    @objc public func fault(_ msg: String, function: String = #function,
+    public func fault(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, faultPrefix, faultPostfix, .fault, function, file, line, column, dso)
         }
     }
+    
+    #else
+    
+    public func debug(_ msg: String, function: String = #function,
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    }
+    public func error(_ msg: String, function: String = #function,
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    }
+    public func info(_ msg: String, function: String = #function,
+                     file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    }
+    public func verbose(_ msg: String, function: String = #function,
+                        file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    }
+    public func fault(_ msg: String, function: String = #function,
+                      file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    }
+
+    #endif
     
     
     fileprivate func format(_ message: String, function: String, file: String, line: Int32, column: Int32) -> String {
