@@ -226,34 +226,47 @@ import os.log
     }
     
     // Objective-C doesn't like params with default values from Swift. Variadic params aren't allowed either.
-//    @objc public func debug(_ msg: String) {
-//
-//        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-//            // well, the problem is, #function will evaluate to this function!
-//            logMessage(msg, debugPrefix, debugPostfix, .debug, #function, #file, #line, #column, #dsohandle)
-//        }
-//    }
+    #if os(OSX)
+    @objc public func debug(_ msg: String) {
 
+        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
+            // well, the problem is, #function will evaluate to this function!
+            logMessage(msg, debugPrefix, debugPostfix, .debug, #function, #file, #line, #column, #dsohandle)
+        }
+    }
+    #endif
+    
+    #if os(iOS) || os(tvOS)
+    #if DEBUG
     @objc public func debug(_ msg: String, function: String? = #function,
-                      file: String? = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+                            file: String? = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, debugPrefix, debugPostfix, .debug, function!, file!, line, column, dso)
         }
     }
+    #else
+    @objc public func debug(_ msg: String, function: String? = #function,
+                            file: String? = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
+    }
+    #endif
+    #endif
     
-//    @objc public func error(_ msg: String) {
-//
-//        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
-//            logMessage(msg, debugPrefix, debugPostfix, .error, #function, #file, #line, #column, #dsohandle)
-//        }
-//    }
+    
+
+    #if os(OSX)
+    @objc public func error(_ msg: String) {
+
+        if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
+            logMessage(msg, debugPrefix, debugPostfix, .error, #function, #file, #line, #column, #dsohandle)
+        }
+    }
+    #endif
     
     @objc public func error(_ msg: String, function: String = #function,
                       file: String = #file, line: Int32 = #line, column: Int32 = #column, dso: UnsafeRawPointer? = #dsohandle) {
         if #available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0, *) {
             logMessage(msg, errorPrefix, errorPostfix, .error, function, file, line, column, dso)
         }
-        
     }
     
     @objc public func info(_ msg: String) {
