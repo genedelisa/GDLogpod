@@ -1,0 +1,8 @@
+author: Gene De Lisa
+author_url: https://twitter.com/GeneDeLisaDev
+github_url: https://github.com/genedelisa/GDLog
+root_url: https://genedelisa.github.io/GDLog/
+module: GDLog
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-workspace, 'GDLog.xcworkspace', -scheme, 'GDLog-iOS']
