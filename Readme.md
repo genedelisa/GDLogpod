@@ -1,4 +1,4 @@
-## GDLogger
+## GDLog
 
 [![Platforms](https://img.shields.io/cocoapods/p/GDLogger.svg)](https://cocoapods.org/pods/GDLogger)
 [![License](https://img.shields.io/cocoapods/l/GDLogger.svg)](https://raw.githubusercontent.com/genedelisa/GDLogger/master/LICENSE)
@@ -25,6 +25,7 @@ Yet another logger for Swift.
 This uses Apple's Unified Logging `OSLog` - and `NSLog` as a fallback, so it's essentially a façade.
 I think this makes `OSLog` easier to use in Swift since you can use string interpolation.
 
+I renamed this from GDLogger since there is already a Cocoapod with that name.
 
 
 - [Requirements](#requirements)

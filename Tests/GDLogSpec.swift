@@ -1,6 +1,6 @@
 //
-//  GDLoggerSpec.swift
-//  GDLogger
+//  GDLogSpec.swift
+//  GDLog
 //
 //  Created by Gene De Lisa on 04/10/16.
 //  Copyright © 2017 genedelisa. All rights reserved.
@@ -8,28 +8,28 @@
 
 import Quick
 import Nimble
-@testable import GDLogger
+@testable import GDLog
 
-class GDLoggerSpec: QuickSpec {
+class GDLogSpec: QuickSpec {
 
     override func spec() {
 
         describe("GDLoggerSpec") {
             
             it("work by default") {
-                let log = GDLogger()
+                let log = GDLog()
                 log.debug("hello")
                 expect(log.logger).toNot(beNil())
             }
             
             it("has a category") {
-                let log = GDLogger(category: "some category")
+                let log = GDLog(category: "some category")
                 log.debug("hello")
                 expect(log.logger).toNot(beNil())
             }
             
             it("has a string subsystem and category") {
-                let log = GDLogger("foosubsystem", category: "foocategory")
+                let log = GDLog("foosubsystem", category: "foocategory")
                 log.debug("hello")
                 expect(log.logger).toNot(beNil())
             }

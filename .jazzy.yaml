@@ -1,4 +1,4 @@
-module: GDLogger
+module: GDLog
 author: Gene De Lisa
 author_url: http://rockhoppertech.com/blog/
 github_url: http://github.com/genedelisa/GDLogger

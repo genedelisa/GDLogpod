@@ -1,6 +1,6 @@
 //
-//  GDLogger.swift
-//  GDLogger
+//  GDLog.swift
+//  GDLog
 //
 //  Created by Gene De Lisa on 02/10/17.
 //  Copyright © 2017 genedelisa. All rights reserved.
@@ -12,7 +12,7 @@ import os.log
 
 /// This is a façade for Apple's Unified Logging `OSLog`.
 /// It falls back to `NSLog` in some cases.
-public struct GDLogger {
+public struct GDLog {
     
     /// the system logger
     public var logger: OSLog?

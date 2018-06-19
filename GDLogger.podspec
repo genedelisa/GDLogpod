@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-    s.name = 'GDLogger'
+    s.name = 'GDLog'
 
-    s.version = '0.0.7'
+    s.version = '1.0.0'
 
     s.license = { :type => "MIT", :file => "LICENSE" }
 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
     s.authors = { "Gene De Lisa" => "gene@rockhoppertech.com" }
 
-    s.source = { :git => "https://github.com/genedelisa/GDLogger.git", :tag => s.version.to_s }
+    s.source = { :git => "https://github.com/genedelisa/GDLog.git", :tag => s.version.to_s }
 
     s.platforms = { :ios => "10.0", :osx => "10.10", :tvos => "10.0", :watchos => "3.0" }
 
