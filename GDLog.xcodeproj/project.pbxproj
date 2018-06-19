@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B090ABF620D9748B00F63210 /* Docs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B090ABF920D9748B00F63210 /* Build configuration list for PBXAggregateTarget "Docs" */;
+			buildPhases = (
+				B090ABFA20D9749300F63210 /* Jazzy */,
+			);
+			dependencies = (
+			);
+			name = Docs;
+			productName = Docs;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1E281E346786ABA493466475 /* Pods_GDLog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06476293295420AFC36A6049 /* Pods_GDLog_iOS.framework */; };
 		1ECE4C59EB7AC6260DD106FF /* Pods_GDLogTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9B516BBDB8B355A536D71D /* Pods_GDLogTests_iOS.framework */; };
@@ -551,6 +565,11 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
+					B090ABF620D9748B00F63210 = {
+						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = 4UDK2944TW;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 3549BAFF1DA387DB00C63030 /* Build configuration list for PBXProject "GDLog" */;
@@ -572,6 +591,7 @@
 				3549BB471DA389F300C63030 /* GDLog-tvOS */,
 				3549BB6F1DA38AEF00C63030 /* GDLogTests-tvOS */,
 				3549BB2D1DA389DB00C63030 /* GDLog-watchOS */,
+				B090ABF620D9748B00F63210 /* Docs */,
 			);
 		};
 /* End PBXProject section */
@@ -758,6 +778,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-tvOS/Pods-GDLogTests-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B090ABFA20D9749300F63210 /* Jazzy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Jazzy;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=$(bash -l -c 'echo $PATH')\nexport TERM=tty\njazzy --clean\n";
 		};
 		CDE7E9629BA5946ED756349C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1299,6 +1333,24 @@
 			};
 			name = Release;
 		};
+		B090ABF720D9748B00F63210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UDK2944TW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B090ABF820D9748B00F63210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UDK2944TW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1370,6 +1422,15 @@
 			buildConfigurations = (
 				3549BB881DA38B0000C63030 /* Debug */,
 				3549BB891DA38B0000C63030 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B090ABF920D9748B00F63210 /* Build configuration list for PBXAggregateTarget "Docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B090ABF720D9748B00F63210 /* Debug */,
+				B090ABF820D9748B00F63210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
