@@ -1,16 +1,33 @@
-# GDLog
+## GDLog
 
-[![Platforms](https://img.shields.io/cocoapods/p/GDLog.svg)](https://cocoapods.org/pods/GDLog)
-[![License](https://img.shields.io/cocoapods/l/GDLog.svg)](https://raw.githubusercontent.com/genedelisa/GDLog/master/LICENSE)
+[![Platforms](https://img.shields.io/cocoapods/p/GDLogger.svg)](https://cocoapods.org/pods/GDLogger)
+[![License](https://img.shields.io/cocoapods/l/GDLogger.svg)](https://raw.githubusercontent.com/genedelisa/GDLogger/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/GDLog.svg)](https://cocoapods.org/pods/GDLog)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/GDLogger.svg)](https://cocoapods.org/pods/GDLogger)
 
-[![Travis](https://img.shields.io/travis/genedelisa/GDLog/master.svg)](https://travis-ci.org/genedelisa/GDLog/branches)
-[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/FrameworkTemplate)
+[![Travis](https://img.shields.io/travis/genedelisa/GDLogger/master.svg)](https://travis-ci.org/genedelisa/GDLogger/branches)
 
-Swift Logging based on OSLog
+[![Swift 4](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
+
+[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://swift.org/)
+[![Platforms macOS](https://img.shields.io/badge/Platforms-macOS-lightgray.svg?style=flat)](https://swift.org/)
+[![Platforms tvOS](https://img.shields.io/badge/Platforms-tvOS-lightgray.svg?style=flat)](https://swift.org/)
+[![Platforms watchOS](https://img.shields.io/badge/Platforms-watchOS-lightgray.svg?style=flat)](https://swift.org/)
+
+[![Sponsors](https://img.shields.io/badge/Sponsors-Rockhopper%20Technologies-orange.svg?style=flat)](http://www.rockhoppertech.com/)
+[![Twitter @GeneDeLisaDev](https://img.shields.io/twitter/follow/GeneDeLisaDev.svg?style=social)](https://twitter.com/GeneDeLisaDev)
+
+
+
+Yet another logger for Swift.
+
+This uses Apple's Unified Logging `OSLog` - and `NSLog` as a fallback, so it's essentially a façade.
+I think this makes `OSLog` easier to use in Swift since you can use string interpolation.
+
+I renamed this from GDLogger since there is already a Cocoapod with that name.
+
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -19,14 +36,12 @@ Swift Logging based on OSLog
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+ / Mac OS X 10.12+ / tvOS 10.0+ / watchOS 3.0+
 - Xcode 9.0+
 
 ## Installation
 
-### Dependency Managers
-<details>
-  <summary><strong>CocoaPods</strong></summary>
+### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
@@ -34,14 +49,15 @@ Swift Logging based on OSLog
 $ gem install cocoapods
 ```
 
-To integrate GDLog into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+To integrate GDLogger into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 
-pod 'GDLog', '~> 3.0.0'
+pod 'GDLogger', '~> 0.0.1'
 ```
 
 Then, run the following command:
@@ -50,10 +66,7 @@ Then, run the following command:
 $ pod install
 ```
 
-</details>
-
-<details>
-  <summary><strong>Carthage</strong></summary>
+### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
 
@@ -64,86 +77,29 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate GDLog into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate GDLogger into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "genedelisa/GDLog" ~> 3.0.0
+github "GDLogger/GDLogger" ~> 0.0.1
 ```
+### Swift Package Manager
 
-</details>
-
-<details>
-  <summary><strong>Swift Package Manager</strong></summary>
-
-To use GDLog as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+To use GDLogger as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
 
 ``` swift
 import PackageDescription
 
 let package = Package(
-    name: "HelloGDLog",
-    dependencies: [
-        .Package(url: "https://github.com/genedelisa/GDLog.git", .upToNextMajor(from: "3.0.0"))
-    ]
+name: "HelloGDLogger",
+dependencies: [
+.Package(url: "https://github.com/genedelisa/GDLogger.git", "0.0.1")
+]
 )
 ```
-</details>
 
 ### Manually
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate GDLog into your project manually.
-
-<details>
-  <summary><strong>Git Submodules</strong></summary><p>
-
-- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
-
-```bash
-$ git init
-```
-
-- Add GDLog as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
-
-```bash
-$ git submodule add https://github.com/genedelisa/GDLog.git
-$ git submodule update --init --recursive
-```
-
-- Open the new `GDLog` folder, and drag the `GDLog.xcodeproj` into the Project Navigator of your application's Xcode project.
-
-    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
-
-- Select the `GDLog.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `GDLog.xcodeproj` folders each with two different versions of the `GDLog.framework` nested inside a `Products` folder.
-
-    > It does not matter which `Products` folder you choose from.
-
-- Select the `GDLog.framework`.
-
-- And that's it!
-
-> The `GDLog.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
-
-</p></details>
-
-<details>
-  <summary><strong>Embeded Binaries</strong></summary><p>
-
-- Download the latest release from https://github.com/genedelisa/GDLog/releases
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- Add the downloaded `GDLog.framework`.
-- And that's it!
-
-</p></details>
-
-### Manually
-
-If you prefer not to use either of the aforementioned dependency managers, you can integrate GDLog into your project manually.
+If you prefer not to use either of the aforementioned dependency managers, you can integrate GDLogger into your project manually.
 
 #### Git Submodules
 
@@ -153,50 +109,107 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 $ git init
 ```
 
-- Add GDLog as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+- Add GDLogger as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/genedelisa/GDLog.git
+$ git submodule add https://github.com/genedelisa/GDLogger.git
 $ git submodule update --init --recursive
 ```
 
-- Open the new `GDLog` folder, and drag the `GDLog.xcodeproj` into the Project Navigator of your application's Xcode project.
+- Open the new `GDLogger` folder, and drag the `GDLogger.xcodeproj` into the Project Navigator of your application's Xcode project.
 
-    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+> It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
 
-- Select the `GDLog.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Select the `GDLogger.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
 - Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `GDLog.xcodeproj` folders each with two different versions of the `GDLog.framework` nested inside a `Products` folder.
+- You will see two different `GDLogger.xcodeproj` folders each with two different versions of the `GDLogger.framework` nested inside a `Products` folder.
 
-    > It does not matter which `Products` folder you choose from.
+> It does not matter which `Products` folder you choose from.
 
-- Select the `GDLog.framework`.
+- Select the `GDLogger.framework`.
 
 - And that's it!
 
-> The `GDLog.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+> The `GDLogger.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
 #### Embeded Binaries
 
-- Download the latest release from https://github.com/genedelisa/GDLog/releases
+- Download the latest release from https://github.com/genedelisa/GDLogger/releases
 - Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
-- Add the downloaded `GDLog.framework`.
+- Add the downloaded `GDLogger.framework`.
 - And that's it!
+
+### Other logging options.
+
+[CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)
+
+[XCGLogger](https://github.com/DaveWoodCom/XCGLogger)
+
 
 ## Usage
 
-## Contributing
+[Apple's Unified Logging](https://developer.apple.com/documentation/os/logging)
 
-Issues and pull requests are welcome!
+To set the logging level for a subsystem.
+```bash
+$ sudo log config --mode "level:debug" --subsystem com.your_company.your_subsystem_name
+```
+For example, from the Terminal (or iterm), set the debug level for your subsystem. Then you can stream the output.
+```bash
 
-## Author
+$ sudo log config --mode "level:debug" --subsystem com.rockhoppertech.SlowItDown
 
-Gene De Lisa [@GeneDeLisaDev](https://twitter.com/GeneDeLisaDev)
+$ log stream --predicate 'subsystem == "com.rockhoppertech.SlowItDown"' --info --debug
+```
+To check the current logging level.
+```bash
+$ sudo log config --status
+```
+
+Use the system console (and/or Xcode's console) to read the logging messages.
+
+You can filter by your subsystem in the Console app.
+
+Sample Console output:
+
+![Console](screenshots/consoleLogging.png "Console")
+
+
+The message emojis can be redefined per level.
+
+```Swift
+var log = GDLogger()
+log.debugPrefix = "♫ "
+log.debugPostfix = "  ♫"
+```
+
+Here is some sample output.
+
+```bash
+2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
+```
+
+Other options for creating loggers.
+
+```Swift
+var log2 = GDLogger(category: "my category")
+log2.debug("logging to my category string")
+
+public enum MyCategories: String {
+case mycat
+}
+var log3 = GDLogger(category: MyCategories.mycat.rawValue)
+log3.debug("logging to my category enum")
+
+var log4 = GDLogger(.controller, category: .general)
+log4.debug("logging to controler subsystem using general category")
+````
 
 ## License
 
-GDLog is released under the MIT license. See [LICENSE](https://github.com/genedelisa/GDLog/blob/master/LICENSE) for details.
+GDLogger is released under the MIT license. See [LICENSE](https://github.com/genedelisa/GDLogger/blob/master/LICENSE) for details.
+

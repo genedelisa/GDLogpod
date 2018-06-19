@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
  s.name = 'GDLog'
 
- s.version = '0.0.1'
+ s.version = '1.0.1'
 
  s.license = { :type => "MIT", :file => "LICENSE" }
 
@@ -25,17 +25,16 @@ Pod::Spec.new do |s|
      ss.framework  = "Foundation"
  end
 
-s.resources = 'Sources/**/*.{json}'
-s.resource_bundles = {
-    'GDLog' => [
-        'Sources/**/*.{xml,SF2,json}'
-    ]
-}
+#s.resources = 'Sources/**/*.{json}'
+#s.resource_bundles = {
+    #'GDLog' => [
+        #'Sources/**/*.{xml,SF2,json}'
+    #]
+#}
 
 s.pod_target_xcconfig =  {
     'SWIFT_VERSION' => '4.0',
 }
 
-s.dependency 'GDLogger'
 
 end

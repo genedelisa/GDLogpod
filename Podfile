@@ -6,17 +6,17 @@ def testing_pods
 end
 
 def shared_pods
-  pod 'GDLogger', :path => '/Users/gene/Development/xcode/gene/Swift/mypods/GDLogger'
+  
 end
 
 
 target 'GDLog-iOS' do
-  platform :ios, '11.3'
+  platform :ios, '11.0'
   shared_pods
 end
 
 target 'GDLogTests-iOS' do
-    platform :ios, '11.3'
+    platform :ios, '11.0'
     inherit! :search_paths
     shared_pods
     testing_pods

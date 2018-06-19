@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E281E346786ABA493466475 /* Pods_GDLog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06476293295420AFC36A6049 /* Pods_GDLog_iOS.framework */; };
+		1ECE4C59EB7AC6260DD106FF /* Pods_GDLogTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9B516BBDB8B355A536D71D /* Pods_GDLogTests_iOS.framework */; };
 		3549BB501DA38A2000C63030 /* GDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* GDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB511DA38A2000C63030 /* GDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* GDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB521DA38A2100C63030 /* GDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* GDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,11 @@
 		35B742371F82A61E00829B21 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B742381F82A62900829B21 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742341F82A61D00829B21 /* Nimble.framework */; };
 		35B742391F82A62900829B21 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; };
+		36B7C2CC5C37F89F5169E529 /* Pods_GDLog_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDF638020035C684900C8BB /* Pods_GDLog_watchOS.framework */; };
+		8930236DFF2BB3DC41CFF933 /* Pods_GDLogTests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC679C073E12C7BF3385071 /* Pods_GDLogTests_macOS.framework */; };
+		8AD5E29D91F15EDBBB3FC6ED /* Pods_GDLog_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB76909B3C8E6B6A32909DA /* Pods_GDLog_macOS.framework */; };
+		D4F36235F9DD3CF408DB99C9 /* Pods_GDLog_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA01214ECAEE958E501057D5 /* Pods_GDLog_tvOS.framework */; };
+		FCFDD5BC38D415C6F728F2A0 /* Pods_GDLogTests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E97D0B0BC4A1EB72EF2FF95 /* Pods_GDLogTests_tvOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +106,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06476293295420AFC36A6049 /* Pods_GDLog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1902C198CC8BDE28C0BC7751 /* Pods-GDLog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-iOS/Pods-GDLog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1BDF638020035C684900C8BB /* Pods_GDLog_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLog_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB76909B3C8E6B6A32909DA /* Pods_GDLog_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLog_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2333BE8DAA17BEF9945A7850 /* Pods-GDLogTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLogTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLogTests-iOS/Pods-GDLogTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3549BB171DA3890B00C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3549BB181DA3890B00C63030 /* GDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLog.h; sourceTree = "<group>"; };
 		3549BB211DA389CD00C63030 /* GDLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +131,22 @@
 		35B7422E1F82A5E000829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		35B742341F82A61D00829B21 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		35B742351F82A61E00829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		36602B4F4D9680E32A6D1632 /* Pods-GDLog-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-watchOS/Pods-GDLog-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		382FF92A33DD881620512014 /* Pods-GDLogTests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLogTests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLogTests-macOS/Pods-GDLogTests-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		5E4E7CC05C0C1D56402331F1 /* Pods-GDLogTests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLogTests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLogTests-macOS/Pods-GDLogTests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		67E44DFB6250B212636D159E /* Pods-GDLog-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-macOS/Pods-GDLog-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6E97D0B0BC4A1EB72EF2FF95 /* Pods_GDLogTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLogTests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78418CD70FDB0521434146DB /* Pods-GDLog-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-tvOS/Pods-GDLog-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7BAE512F1131FA0A26BD317E /* Pods-GDLog-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-watchOS/Pods-GDLog-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		7E98FB8F28640E0408B46FF8 /* Pods-GDLog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-iOS/Pods-GDLog-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7F9B516BBDB8B355A536D71D /* Pods_GDLogTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLogTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8560D29B32DBA92F36D08A17 /* Pods-GDLogTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLogTests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDLogTests-tvOS/Pods-GDLogTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		86A50FA83CE91EA53F44654E /* Pods-GDLog-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-tvOS/Pods-GDLog-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		AC70668F5E203A0250A4E14A /* Pods-GDLogTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLogTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLogTests-iOS/Pods-GDLogTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BBC679C073E12C7BF3385071 /* Pods_GDLogTests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLogTests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD211CF6E3E4AD113151679 /* Pods-GDLogTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLogTests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLogTests-tvOS/Pods-GDLogTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		DC69D119429E415AFDE9DEB6 /* Pods-GDLog-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDLog-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDLog-macOS/Pods-GDLog-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		FA01214ECAEE958E501057D5 /* Pods_GDLog_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDLog_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E281E346786ABA493466475 /* Pods_GDLog_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B7C2CC5C37F89F5169E529 /* Pods_GDLog_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD5E29D91F15EDBBB3FC6ED /* Pods_GDLog_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F36235F9DD3CF408DB99C9 /* Pods_GDLog_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +189,7 @@
 				35B742311F82A5EC00829B21 /* Nimble.framework in Frameworks */,
 				35B742321F82A5EC00829B21 /* Quick.framework in Frameworks */,
 				3549BB661DA38ADB00C63030 /* GDLog.framework in Frameworks */,
+				1ECE4C59EB7AC6260DD106FF /* Pods_GDLogTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +200,7 @@
 				354AD5861F8A659800B18FAE /* Quick.framework in Frameworks */,
 				354AD5871F8A659800B18FAE /* Nimble.framework in Frameworks */,
 				3549BB751DA38AEF00C63030 /* GDLog.framework in Frameworks */,
+				FCFDD5BC38D415C6F728F2A0 /* Pods_GDLogTests_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,12 +211,34 @@
 				35B742381F82A62900829B21 /* Nimble.framework in Frameworks */,
 				35B742391F82A62900829B21 /* Quick.framework in Frameworks */,
 				3549BB841DA38B0000C63030 /* GDLog.framework in Frameworks */,
+				8930236DFF2BB3DC41CFF933 /* Pods_GDLogTests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A43342235AB3AC9F130000 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1902C198CC8BDE28C0BC7751 /* Pods-GDLog-iOS.debug.xcconfig */,
+				7E98FB8F28640E0408B46FF8 /* Pods-GDLog-iOS.release.xcconfig */,
+				67E44DFB6250B212636D159E /* Pods-GDLog-macOS.debug.xcconfig */,
+				DC69D119429E415AFDE9DEB6 /* Pods-GDLog-macOS.release.xcconfig */,
+				78418CD70FDB0521434146DB /* Pods-GDLog-tvOS.debug.xcconfig */,
+				86A50FA83CE91EA53F44654E /* Pods-GDLog-tvOS.release.xcconfig */,
+				36602B4F4D9680E32A6D1632 /* Pods-GDLog-watchOS.debug.xcconfig */,
+				7BAE512F1131FA0A26BD317E /* Pods-GDLog-watchOS.release.xcconfig */,
+				2333BE8DAA17BEF9945A7850 /* Pods-GDLogTests-iOS.debug.xcconfig */,
+				AC70668F5E203A0250A4E14A /* Pods-GDLogTests-iOS.release.xcconfig */,
+				5E4E7CC05C0C1D56402331F1 /* Pods-GDLogTests-macOS.debug.xcconfig */,
+				382FF92A33DD881620512014 /* Pods-GDLogTests-macOS.release.xcconfig */,
+				8560D29B32DBA92F36D08A17 /* Pods-GDLogTests-tvOS.debug.xcconfig */,
+				CFD211CF6E3E4AD113151679 /* Pods-GDLogTests-tvOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3549BAFB1DA387DB00C63030 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +246,7 @@
 				3549BB191DA3890B00C63030 /* Tests */,
 				3549BB061DA387DB00C63030 /* Products */,
 				357D954B1DA3F2B400AEC55F /* Frameworks */,
+				04A43342235AB3AC9F130000 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +310,13 @@
 				35B7422E1F82A5E000829B21 /* Quick.framework */,
 				354AD5851F8A659800B18FAE /* Nimble.framework */,
 				354AD5841F8A659800B18FAE /* Quick.framework */,
+				06476293295420AFC36A6049 /* Pods_GDLog_iOS.framework */,
+				1DB76909B3C8E6B6A32909DA /* Pods_GDLog_macOS.framework */,
+				FA01214ECAEE958E501057D5 /* Pods_GDLog_tvOS.framework */,
+				1BDF638020035C684900C8BB /* Pods_GDLog_watchOS.framework */,
+				7F9B516BBDB8B355A536D71D /* Pods_GDLogTests_iOS.framework */,
+				BBC679C073E12C7BF3385071 /* Pods_GDLogTests_macOS.framework */,
+				6E97D0B0BC4A1EB72EF2FF95 /* Pods_GDLogTests_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,6 +371,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB261DA389CD00C63030 /* Build configuration list for PBXNativeTarget "GDLog-iOS" */;
 			buildPhases = (
+				4FF2E8861CFD3328E748B2E8 /* [CP] Check Pods Manifest.lock */,
 				3549BB1C1DA389CD00C63030 /* Sources */,
 				3549BB1D1DA389CD00C63030 /* Frameworks */,
 				3549BB1E1DA389CD00C63030 /* Headers */,
@@ -325,6 +390,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB331DA389DB00C63030 /* Build configuration list for PBXNativeTarget "GDLog-watchOS" */;
 			buildPhases = (
+				736BFE074BA119E8E32401E2 /* [CP] Check Pods Manifest.lock */,
 				3549BB291DA389DB00C63030 /* Sources */,
 				3549BB2A1DA389DB00C63030 /* Frameworks */,
 				3549BB2B1DA389DB00C63030 /* Headers */,
@@ -343,6 +409,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB401DA389E800C63030 /* Build configuration list for PBXNativeTarget "GDLog-macOS" */;
 			buildPhases = (
+				CDE7E9629BA5946ED756349C /* [CP] Check Pods Manifest.lock */,
 				3549BB361DA389E800C63030 /* Sources */,
 				3549BB371DA389E800C63030 /* Frameworks */,
 				3549BB381DA389E800C63030 /* Headers */,
@@ -361,6 +428,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB4D1DA389F300C63030 /* Build configuration list for PBXNativeTarget "GDLog-tvOS" */;
 			buildPhases = (
+				0E09A27AB7C0A433265BB8E5 /* [CP] Check Pods Manifest.lock */,
 				3549BB431DA389F300C63030 /* Sources */,
 				3549BB441DA389F300C63030 /* Frameworks */,
 				3549BB451DA389F300C63030 /* Headers */,
@@ -379,10 +447,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB691DA38ADB00C63030 /* Build configuration list for PBXNativeTarget "GDLogTests-iOS" */;
 			buildPhases = (
+				F13580D93F5B0BEFA398DC21 /* [CP] Check Pods Manifest.lock */,
 				3549BB5D1DA38ADB00C63030 /* Sources */,
 				3549BB5E1DA38ADB00C63030 /* Frameworks */,
 				3549BB5F1DA38ADB00C63030 /* Resources */,
 				35B7422C1F82A2C700829B21 /* Embed Frameworks */,
+				4B1B04CB0B005374ACA40164 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,10 +468,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB781DA38AEF00C63030 /* Build configuration list for PBXNativeTarget "GDLogTests-tvOS" */;
 			buildPhases = (
+				563402579078ED7CCDBC18A8 /* [CP] Check Pods Manifest.lock */,
 				3549BB6C1DA38AEF00C63030 /* Sources */,
 				3549BB6D1DA38AEF00C63030 /* Frameworks */,
 				3549BB6E1DA38AEF00C63030 /* Resources */,
 				35B7423A1F82A63600829B21 /* Embed Frameworks */,
+				9B77AB57D6DE5BAD9A29D30A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -417,10 +489,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB871DA38B0000C63030 /* Build configuration list for PBXNativeTarget "GDLogTests-macOS" */;
 			buildPhases = (
+				046CF228315038C986ADD6C9 /* [CP] Check Pods Manifest.lock */,
 				3549BB7B1DA38B0000C63030 /* Sources */,
 				3549BB7C1DA38B0000C63030 /* Frameworks */,
 				3549BB7D1DA38B0000C63030 /* Resources */,
 				35B742331F82A60600829B21 /* Embed Frameworks */,
+				EFC3D226D7B22575617827D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -553,6 +627,195 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046CF228315038C986ADD6C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLogTests-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E09A27AB7C0A433265BB8E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLog-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1B04CB0B005374ACA40164 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-iOS/Pods-GDLogTests-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-iOS/Pods-GDLogTests-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FF2E8861CFD3328E748B2E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLog-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		563402579078ED7CCDBC18A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLogTests-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		736BFE074BA119E8E32401E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLog-watchOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B77AB57D6DE5BAD9A29D30A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-tvOS/Pods-GDLogTests-tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-tvOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-tvOS/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-tvOS/Pods-GDLogTests-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE7E9629BA5946ED756349C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLog-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFC3D226D7B22575617827D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-macOS/Pods-GDLogTests-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDLogTests-macOS/Pods-GDLogTests-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F13580D93F5B0BEFA398DC21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDLogTests-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3549BB1C1DA389CD00C63030 /* Sources */ = {
@@ -751,6 +1014,7 @@
 		};
 		3549BB271DA389CD00C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1902C198CC8BDE28C0BC7751 /* Pods-GDLog-iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -770,6 +1034,7 @@
 		};
 		3549BB281DA389CD00C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E98FB8F28640E0408B46FF8 /* Pods-GDLog-iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -788,6 +1053,7 @@
 		};
 		3549BB341DA389DB00C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36602B4F4D9680E32A6D1632 /* Pods-GDLog-watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -810,6 +1076,7 @@
 		};
 		3549BB351DA389DB00C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAE512F1131FA0A26BD317E /* Pods-GDLog-watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -831,6 +1098,7 @@
 		};
 		3549BB411DA389E800C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E44DFB6250B212636D159E /* Pods-GDLog-macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -853,6 +1121,7 @@
 		};
 		3549BB421DA389E800C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC69D119429E415AFDE9DEB6 /* Pods-GDLog-macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -874,6 +1143,7 @@
 		};
 		3549BB4E1DA389F300C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78418CD70FDB0521434146DB /* Pods-GDLog-tvOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -895,6 +1165,7 @@
 		};
 		3549BB4F1DA389F300C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A50FA83CE91EA53F44654E /* Pods-GDLog-tvOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -915,6 +1186,7 @@
 		};
 		3549BB6A1DA38ADB00C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2333BE8DAA17BEF9945A7850 /* Pods-GDLogTests-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -932,6 +1204,7 @@
 		};
 		3549BB6B1DA38ADB00C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC70668F5E203A0250A4E14A /* Pods-GDLogTests-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -948,6 +1221,7 @@
 		};
 		3549BB791DA38AEF00C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8560D29B32DBA92F36D08A17 /* Pods-GDLogTests-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -967,6 +1241,7 @@
 		};
 		3549BB7A1DA38AEF00C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD211CF6E3E4AD113151679 /* Pods-GDLogTests-tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -985,6 +1260,7 @@
 		};
 		3549BB881DA38B0000C63030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E4E7CC05C0C1D56402331F1 /* Pods-GDLogTests-macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1005,6 +1281,7 @@
 		};
 		3549BB891DA38B0000C63030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 382FF92A33DD881620512014 /* Pods-GDLogTests-macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
