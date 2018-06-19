@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GDLog Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/GDLog" class="dashAnchor"></a>
+    <a title="GDLog Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">GDLog Docs</a> (40% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">GDLog Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        GDLog Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/GDLog.html">GDLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GDLog/LogSubsystem.html">– LogSubsystem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GDLog/LogCategory.html">– LogCategory</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>GDLog</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GDLog</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a façade for Apple&rsquo;s Unified Logging <code>OSLog</code>.
+It falls back to <code>NSLog</code> in some cases.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV6loggerSo5OSLogCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/logger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV6loggerSo5OSLogCSgvp">logger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>the system logger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt">OSLog</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV12LogSubsystemO"></a>
+                    <a name="//apple_ref/swift/Enum/LogSubsystem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV12LogSubsystemO">LogSubsystem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Predefined subsystems.</p>
+
+                        <a href="../Structs/GDLog/LogSubsystem.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LogSubsystem</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV11LogCategoryO"></a>
+                    <a name="//apple_ref/swift/Enum/LogCategory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV11LogCategoryO">LogCategory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Category.</p>
+
+                        <a href="../Structs/GDLog/LogCategory.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LogCategory</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV11debugPrefixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV11debugPrefixSSvp">debugPrefix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted before message in debug level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugPrefix</span> <span class="o">=</span> <span class="s">"😺😺😺 "</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV12debugPostfixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugPostfix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV12debugPostfixSSvp">debugPostfix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted after message in debug level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugPostfix</span> <span class="o">=</span> <span class="s">" 😺😺😺"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV11errorPrefixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/errorPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV11errorPrefixSSvp">errorPrefix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted before message in error level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorPrefix</span> <span class="o">=</span> <span class="s">"‼️😿‼️ "</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV12errorPostfixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/errorPostfix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV12errorPostfixSSvp">errorPostfix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted after message in error level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorPostfix</span> <span class="o">=</span> <span class="s">" ‼️😿‼️"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV10infoPrefixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/infoPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV10infoPrefixSSvp">infoPrefix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted before message in info level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">infoPrefix</span> <span class="o">=</span> <span class="s">"ℹ️😼ℹ️ "</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV11infoPostfixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/infoPostfix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV11infoPostfixSSvp">infoPostfix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted after message in info level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">infoPostfix</span> <span class="o">=</span> <span class="s">" ℹ️😼ℹ️"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV11faultPrefixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/faultPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV11faultPrefixSSvp">faultPrefix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted before message in fault level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">faultPrefix</span> <span class="o">=</span> <span class="s">"🙀🙀‼️ "</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV12faultPostfixSSvp"></a>
+                    <a name="//apple_ref/swift/Property/faultPostfix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV12faultPostfixSSvp">faultPostfix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>emitted after message in fault level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">faultPostfix</span> <span class="o">=</span> <span class="s">" 🙀🙀‼️"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV12msgSeparatorSSvp"></a>
+                    <a name="//apple_ref/swift/Property/msgSeparator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV12msgSeparatorSSvp">msgSeparator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>message format separator</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">msgSeparator</span> <span class="o">=</span> <span class="s">" ☞ "</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV13fileSeparatorSSvp"></a>
+                    <a name="//apple_ref/swift/Property/fileSeparator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV13fileSeparatorSSvp">fileSeparator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fileSeparator</span> <span class="o">=</span> <span class="s">" 🗄"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV13lineSeparatorSSvp"></a>
+                    <a name="//apple_ref/swift/Property/lineSeparator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV13lineSeparatorSSvp">lineSeparator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lineSeparator</span> <span class="o">=</span> <span class="s">"➸"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV15columnSeparatorSSvp"></a>
+                    <a name="//apple_ref/swift/Property/columnSeparator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV15columnSeparatorSSvp">columnSeparator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">columnSeparator</span> <span class="o">=</span> <span class="s">":"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAVABSSSg_SS8categorytcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:category:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAVABSSSg_SS8categorytcfc">init(_:category:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init that actually creates the <code>OSLog</code> instance. Or not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">subsystem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subsystem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an optional subsystem. The bundle if not specified</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>category</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the category to use</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAVA2B12LogSubsystemO_AB0B8CategoryO8categorytcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:category:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAVA2B12LogSubsystemO_AB0B8CategoryO8categorytcfc">init(_:category:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init with specified predefined subsystem and category</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">subsystem</span><span class="p">:</span> <span class="kt"><a href="../Structs/GDLog/LogSubsystem.html">LogSubsystem</a></span><span class="p">,</span> <span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Structs/GDLog/LogCategory.html">LogCategory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">general</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subsystem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a subsystem predefined in <code><a href="../Structs/GDLog/LogSubsystem.html">LogSubsystem</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>category</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a category predefined in <code><a href="../Structs/GDLog/LogCategory.html">LogCategory</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAVABSSSg_AB11LogCategoryO8categorytcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:category:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAVABSSSg_AB11LogCategoryO8categorytcfc">init(_:category:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default init. Called with inited with no args</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">subsystem</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Structs/GDLog/LogCategory.html">LogCategory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">general</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subsystem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the bundle if not specified</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>category</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>general if not specified</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV4infoys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/info(_:_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV4infoys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF">info(_:_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a Static String with Info level.</p>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    iOS 10.0, macOS 10.12, tvOS 10.0, watchOSApplicationExtension 3.0
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">info</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                 <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>msg</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a Static String. No interpolation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the arguments to pass to the static string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>defaults to function name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>defaults to filename</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>defaults to line where this was called</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>defaults to column where this was called</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dso</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>dynamic shared objct. the currently loaded .dylib or .so</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV7verboseys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/verbose(_:_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV7verboseys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF">verbose(_:_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">verbose</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                    <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV5errorys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/error(_:_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV5errorys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF">error(_:_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                  <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV5debugys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/debug(_:_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV5debugys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF">debug(_:_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                  <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV5faultys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/fault(_:_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV5faultys12StaticStringV_s7CVarArg_pSS8functionSS4files5Int32V4lineAJ6columnSVSg3dsotF">fault(_:_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fault</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                  <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV5debugySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/debug(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV5debugySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF">debug(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                  <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV5errorySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/error(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV5errorySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF">error(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                  <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV4infoySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/info(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV4infoySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF">info(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">info</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                 <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV7verboseySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/verbose(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV7verboseySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF">verbose(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">verbose</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                    <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5GDLogAAV5faultySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF"></a>
+                    <a name="//apple_ref/swift/Method/fault(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5GDLogAAV5faultySS_SS8functionSS4files5Int32V4lineAG6columnSVSg3dsotF">fault(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fault</span><span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#function</span><span class="p">,</span>
+                  <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">,</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="kd">#column</span><span class="p">,</span> <span class="nv">dso</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">?</span> <span class="o">=</span> <span class="kd">#dsohandle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/debug(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">debug(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/error(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">error(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/info(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">info(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/verbose(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">verbose(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/fault(_:function:file:line:column:dso:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">fault(_:function:file:line:column:dso:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://rockhoppertech.com" target="_blank" rel="external">Gene De Lisa</a>. All rights reserved. (Last updated: 2018-06-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

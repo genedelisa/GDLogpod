@@ -1,0 +1,180 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 22,
+      "symbol": "GDLog.LogSubsystem.default",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 23,
+      "symbol": "GDLog.LogSubsystem.bundle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 24,
+      "symbol": "GDLog.LogSubsystem.core",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 25,
+      "symbol": "GDLog.LogSubsystem.db",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 26,
+      "symbol": "GDLog.LogSubsystem.net",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 27,
+      "symbol": "GDLog.LogSubsystem.media",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 28,
+      "symbol": "GDLog.LogSubsystem.io",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 29,
+      "symbol": "GDLog.LogSubsystem.model",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 30,
+      "symbol": "GDLog.LogSubsystem.view",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 31,
+      "symbol": "GDLog.LogSubsystem.controller",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 36,
+      "symbol": "GDLog.LogCategory.general",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 37,
+      "symbol": "GDLog.LogCategory.params",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 38,
+      "symbol": "GDLog.LogCategory.paramsController",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 63,
+      "symbol": "GDLog.fileSeparator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 64,
+      "symbol": "GDLog.lineSeparator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 65,
+      "symbol": "GDLog.columnSeparator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 155,
+      "symbol": "GDLog.verbose(_:_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 164,
+      "symbol": "GDLog.error(_:_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 172,
+      "symbol": "GDLog.debug(_:_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 180,
+      "symbol": "GDLog.fault(_:_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 221,
+      "symbol": "GDLog.debug(_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 228,
+      "symbol": "GDLog.error(_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 236,
+      "symbol": "GDLog.info(_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 245,
+      "symbol": "GDLog.verbose(_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog/Sources/Core/GDLog.swift",
+      "line": 253,
+      "symbol": "GDLog.fault(_:function:file:line:column:dso:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/gene/Development/xcode/gene/Swift/mypods/GDLog"
+}
