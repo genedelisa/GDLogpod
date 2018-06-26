@@ -34,6 +34,9 @@ public struct GDLog {
     /// The Category.
     public enum LogCategory: String {
         case general
+        case ui
+        case audio
+        case midi
         case params
         case paramsController
     }
@@ -63,6 +66,7 @@ public struct GDLog {
     public var fileSeparator = " 🗄"
     public var lineSeparator = "➸"
     public var columnSeparator = ":"
+    
     //2017-12-18 15:54:03.611598-0500 SlowItDown[31758:2620634] [general] 😺😺😺 authorized ☞ checkMediaLibraryPermission() 🗄MediaLibraryController.swift➸121 😺😺😺
     
     
