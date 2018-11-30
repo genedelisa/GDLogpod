@@ -2,4 +2,7 @@
 
 import GDLog
 
-var str = "Hello, playground"
+
+let log = GDLog()
+
+log.debug("Hello")
