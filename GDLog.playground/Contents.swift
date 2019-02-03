@@ -1,8 +1,8 @@
 //: Playground - noun: a place where people can play
 
-import GDLog
+//import GDLog
 
 
-let log = GDLog()
+//let log = GDLog()
 
-log.debug("Hello")
+//log.debug("Hello")
